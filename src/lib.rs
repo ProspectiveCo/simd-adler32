@@ -81,6 +81,7 @@
   all(feature = "nightly", any(target_arch = "x86", target_arch = "x86_64")),
   feature(stdarch_x86_avx512, avx512_target_feature)
 )]
+#![cfg_attr(all(target_arch = "wasm64"), feature(simd_wasm64))]
 
 #[doc(hidden)]
 pub mod hash;
